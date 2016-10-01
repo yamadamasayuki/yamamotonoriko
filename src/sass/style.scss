@@ -1,0 +1,240 @@
+@charset "UTF-8";
+@import "base";
+@import "common";
+
+
+/* /////////////////////////////////////////////////////
+  family
+//////////////////////////////////////////////////////*/
+
+#family,#gallery{
+  .contents{
+    width: 90%;
+  }
+}
+
+/* /////////////////////////////////////////////////////
+  works
+//////////////////////////////////////////////////////*/
+#works{
+  .contents{
+    width: 90%;
+    position: relative;
+  }
+}
+$widthS: 130px;
+$widthM: 300px;
+$widthL: 620px;
+
+.m-gallery {
+  width: 100%;
+  margin: 0 auto;   /*中央寄せ*/
+  position: relative;
+  .thumbnail {
+    margin: 10px;
+    width: $widthM;
+    overflow: hidden;
+    text-align: center;
+    @media #{$S}{
+      width: 120px;
+      margin: 5px;
+    }
+    p.caption{
+      width: $widthM;
+    }
+  }
+  .thumbnail.x2{
+    width: 130px;
+    p.caption{
+      width: $widthS;
+    }
+  }
+  .thumbnail.x3 {
+    p.caption{
+      width: $widthL;
+    }
+  }
+  .thumbnail img {
+    width: 100%;
+  }
+  a{
+    text-decoration: none;
+  }
+  p.caption{
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    // border-left: 1px solid $base-color;
+    // border-right: 1px solid $base-color;
+    // border-bottom: 1px solid $base-color;
+    // border-radius: 0 0 5px 5px;
+    @media #{$S}{
+      font-size: 1.2rem;
+      height: 70px;
+    }
+  }
+}
+#works{
+  .m-gallery {
+    .thumbnail {
+      border: 1px solid $base-color;
+    }
+  }
+}
+.j-gallery img:hover,
+.m-gallery .thumbnail:hover{
+  opacity: .7;
+}
+
+
+
+
+
+/* /////////////////////////////////////////////////////
+  profile
+//////////////////////////////////////////////////////*/
+
+div.section-inner{
+  h2.section-ttl{
+  }
+  p{
+    text-align: center;
+  }
+  p{
+    font-size: 1rem;
+    line-height: 2rem;
+    @media #{$M}{
+      font-size: 1.4rem;
+      line-height: 3rem;
+    }
+    @media #{$L}{
+      font-size: 1.8rem;
+      line-height: 4rem;
+    }
+  }
+}
+main{
+  margin-top: 100px;
+}
+section{
+  padding: 100px 0;
+  .profile-img{
+    display: block;
+    width: 250px;
+    height: auto;
+    // filter: grayscale(100%) brightness(105%);
+    margin: 0 auto;
+  }
+  div#profileText{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 100%;
+    @media #{$M}{
+      width: 455px;
+    }
+    td{
+      @media #{$S}{
+        font-size: 1.2rem;
+      }
+      @media #{$M}{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}/*-- /div.#profile --*/
+
+/* /////////////////////////////////////////////////////
+  contact
+//////////////////////////////////////////////////////*/
+
+form{
+  width: 285px;
+  margin: 0 auto;
+  @media #{$M}{
+    width: 450px;
+  }
+  p{
+    margin-top: 15px;
+    width: 100%;
+    @media #{$S}{
+      font-size: 1.2rem;
+    }
+    @media #{$M}{
+      margin-top: 20px;
+      width: 450px;
+    }
+    &:nth-child(4){
+      display: inline-block;
+    }
+    &:last-child{
+      text-align: center;
+      margin-top: 20px;
+    }
+    label{
+      font-weight: bold;
+      width: 85px;
+      @media #{$M}{
+        width: 150px;
+      }
+    }
+    input[type="button"],input[type="text"],input[type="submit"],textarea {
+       -webkit-appearance: none;
+       border-radius: 5px;
+    }
+    input[type="text"], textarea {
+      line-height: 3rem;
+      padding: 0 8px;
+      border: none;
+    }
+    input[type="text"] {
+      @media #{$S}{
+        width: 185px;
+      }
+    }
+    input[type="submit"]{
+      border: none;
+      background: $base-color;
+      color: #fff;
+      width: 150px;
+      line-height: 4.5rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.2rem;
+      &:hover{
+        background: lighten($base-color, 10%);
+        cursor: pointer;
+      }
+    }
+    textarea{
+      margin-top: 10px;
+      border: solid 1px rgb(128, 208, 157);
+      width: 267px;
+      @media #{$M}{
+        width: 432px;
+      }
+    }
+    input[type="radio"]{
+      margin-left: 30px;
+      margin-right: 10px;
+    }
+  }/*-- /p --*/
+  .underLine{
+    display: flex;
+  }
+  .underLine::after{
+    content: "";
+    left: 0;
+    right: 0;
+    margin: 32px auto 0;
+    position: absolute;
+    border-bottom: solid 1px #80d09d;
+    height: 0;
+    width: 285px;
+    @media #{$M}{
+      width: 432px;
+    }
+  }
+}/*-- /form --*/
+
+
+@import "font-awesome";

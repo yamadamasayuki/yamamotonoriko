@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" >
+    <title>Photographer 山本倫子</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/justifiedGallery.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  </head>
+  <body id="family">
+    <div class="humberger-icon type-6">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+    <div id="top">
+      <div id="top-inner"></div>
+      <div id="ttlWrap" class="none">
+        <h2 class="ttl ttl-en">FAMILY</h1>
+      </div><!-- /#titleWrap -->
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="txt-en">HOME</a></li>
+          <li class="active-li txt-en">FAMILY</li>
+          <li><a href="works.html" class="txt-en">WORKS</a></li>
+          <li><a href="gallery.html" class="txt-en">GALLERY</a></li>
+          <li><a href="profile.html" class="txt-en">PROFILE</a></li>
+          <li><a href="contact.html" class="txt-en">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div id="arrowWrap"><span>scroll</span><i id="arrow" class="fa fa-angle-down" aria-hidden="true"></i></div></div>
+    </div><!-- /#top -->
+    <main>
+      <div class="container contents">
+        <section class="section family">
+          <h2 class="section-ttl">Family</h2>
+          <div class="j-gallery">
+            <a href="img/family_001.jpg"><img src="img/family_001.jpg" alt=""></a>
+            <a href="img/family_002.jpg"><img src="img/family_002.jpg" alt=""></a>
+            <a href="img/family_003.jpg"><img src="img/family_003.jpg" alt=""></a>
+            <a href="img/family_004.jpg"><img src="img/family_004.jpg" alt=""></a>
+            <a href="img/family_005.jpg"><img src="img/family_005.jpg" alt=""></a>
+            <a href="img/family_006.jpg"><img src="img/family_006.jpg" alt=""></a>
+            <a href="img/family_007.jpg"><img src="img/family_007.jpg" alt=""></a>
+            <a href="img/family_008.jpg"><img src="img/family_008.jpg" alt=""></a>
+            <a href="img/family_009.jpg"><img src="img/family_009.jpg" alt=""></a>
+            <a href="img/family_010.jpg"><img src="img/family_010.jpg" alt=""></a>
+            <a href="img/family_011.jpg"><img src="img/family_011.jpg" alt=""></a>
+            <a href="img/family_012.jpg"><img src="img/family_012.jpg" alt=""></a>
+            <a href="img/family_013.jpg"><img src="img/family_013.jpg" alt=""></a>
+            <a href="img/family_014.jpg"><img src="img/family_014.jpg" alt=""></a>
+            <a href="img/family_015.jpg"><img src="img/family_015.jpg" alt=""></a>
+            <a href="img/family_016.jpg"><img src="img/family_016.jpg" alt=""></a>
+            <a href="img/family_017.jpg"><img src="img/family_017.jpg" alt=""></a>
+            <a href="img/family_018.jpg"><img src="img/family_018.jpg" alt=""></a>
+            <a href="img/family_019.jpg"><img src="img/family_019.jpg" alt=""></a>
+            <a href="img/family_020.jpg"><img src="img/family_020.jpg" alt=""></a>
+            <a href="img/family_021.jpg"><img src="img/family_021.jpg" alt=""></a>
+            <a href="img/family_022.jpg"><img src="img/family_022.jpg" alt=""></a>
+          </div>
+        </section>
+      </div><!-- /.contents -->
+    </main>
+    <footer>
+      <p class="ft-copy txt-en"><small>&copy; 2016 Noriko Yamamoto All right reserved.</small></p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/jquery.justifiedGallery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".j-gallery").justifiedGallery({
+        rowHeight       : 300, // 1行の高さ設定
+    		fixedHeight     : true, // rowHeightに沿った高さにするか
+    		margins         : 20, // 画像の隙間設定
+    		lastRow         : 'nojustify', // 最後の行をどうするか
+    		//randomize       : true, // ランダム
+    		sort            : false, // ソートをするかどうか
+    		rel             : 'gallery1', // rel属性の書き換え
+    		//captions        : true, // captionを付けるかどうか
+    		//captionSettings : { animationDuration: 500, visibleOpacity: 0.8, nonVisibleOpacity: 0.0 } // caption設定
+      });
+    });
+    </script>
+  </body>
+</html>
