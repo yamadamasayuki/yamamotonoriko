@@ -15,16 +15,12 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   </head>
   <body id="contact">
-    <div class="humberger-icon type-6">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
-    <div id="top">
-      <div id="top-inner"></div>
-      <div id="ttlWrap" class="none">
-        <h2 class="ttl ttl-en">CONTACT</h1>
-      </div><!-- /#titleWrap -->
+    <header>
+      <div class="humberger-icon type-6">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
       <nav class="nav">
         <ul>
           <li><a href="index.html" class="txt-en">HOME</a></li>
@@ -35,13 +31,31 @@
           <li class="active-li txt-en">CONTACT</li>
         </ul>
       </nav>
+    </header>
+    <!-- <div id="top">
+      <div id="top-inner"></div>
+      <div id="ttlWrap" class="none">
+        <h2 class="ttl ttl-en">CONTACT</h1>
+      </div> -->
+      <!-- /#titleWrap -->
+      <!-- <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="txt-en">HOME</a></li>
+          <li><a href="family.html" class="txt-en">FAMILY</a></li>
+          <li><a href="works.html" class="txt-en">WORKS</a></li>
+          <li><a href="gallery.html" class="txt-en">GALLERY</a></li>
+          <li><a href="profile.html" class="txt-en">PROFILE</a></li>
+          <li class="active-li txt-en">CONTACT</li>
+        </ul>
+      </nav>
       <div id="arrowWrap"><span>scroll</span><i id="arrow" class="fa fa-angle-down" aria-hidden="true"></i></div></div>
-    </div><!-- /#top -->
+    </div> -->
+    <!-- /#top -->
     <main>
-      <div class="container contents">
+      <div id="contents" class="container">
         <section class="section contact">
-          <h2 class="section-ttl">Contact</h2>
-          <form>
+          <h2 class="section-ttl none">Contact</h2>
+          <form class="none">
             <p class="underLine"><label for="userName">お名前</label><input type="text" name="userName" size="39" id="userName"></p>
             <p class="underLine"><label for="tel">電話番号</label><input type="text" name="tel" size="39" id="tel"></p>
             <p class="underLine"><label for="email">メールアドレス</label><input type="text" name="email" size="39" id="email"></p>
@@ -52,9 +66,10 @@
         </section>
       </div><!-- /.contents -->
     </main>
-    <footer>
+    <footer id="footer">
       <p class="ft-copy txt-en"><small>&copy; 2016 Noriko Yamamoto All right reserved.</small></p>
     </footer>
     <script src="js/common.js"></script>
+    <script src="js/plugin.js"></script>
   </body>
 </html>

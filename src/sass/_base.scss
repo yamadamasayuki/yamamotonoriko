@@ -1,7 +1,3 @@
-$S : "screen and (max-width:480px)";
-$M : "screen and (min-width:481px)";
-$L : "screen and (min-width:769px)";
-$other-PC : "screen and (max-width:768px)";
 
 $base-color: #80d09d;
 $font-color: #777;
@@ -16,42 +12,54 @@ h1,h2,h3,h4,h5,h6,p,a,td,span,input,textarea,div{
   font-family: "MS PMincho", "Hiragino Mincho Pro", "YuMincho", "serif";
   /*font-family: "MS PGothic", monospace, "Hiragino Kaku Gothic ProN", "Hiragino Maru Gothic Pro", sans-serif;*/
 }
+
 html {
   font-size: 62.5%;
 }
+
 body {
   font-size: 16px;
   font-size: 1.6rem;
 }
+
 .txt-en{
   font-family: "martel", "serif";
 }
+
 h1 {
   font-size: 32px;
   font-size: 3.2rem;
 }
+
 h2{
   letter-spacing: 0.08rem;
 }
+
 p{
   line-height: 3rem;
   letter-spacing: 0.15rem
 }
+
 table{
   width: 100%;
 }
+
 td{
   line-height: 3rem;
   letter-spacing: 0.1rem
 }
+
 img{
   vertical-align: bottom;
   touch-callout:none;
   user-select:none;
 }
+
 a:hover{
   text-decoration: none;
   color: $base-color;
+  cursor: pointer;
 }
+
 ::selection{background: rgba(128, 208, 157, 0.3);}
 ::-moz-selection{background: rgba(128, 208, 157, 0.3);}

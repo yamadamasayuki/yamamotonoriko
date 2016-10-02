@@ -8,7 +8,7 @@
 //////////////////////////////////////////////////////*/
 
 #family,#gallery{
-  .contents{
+  #contents{
     width: 90%;
   }
 }
@@ -17,41 +17,42 @@
   works
 //////////////////////////////////////////////////////*/
 #works{
-  .contents{
+  #contents{
     width: 90%;
     position: relative;
   }
 }
-$widthS: 130px;
-$widthM: 300px;
-$widthL: 620px;
+$img-sizeS: 130px;
+$img-sizeM: 300px;
+$img-sizeL: 620px;
 
 .m-gallery {
   width: 100%;
-  margin: 0 auto;   /*中央寄せ*/
+  margin: 0 auto;
   position: relative;
+  margin-bottom: 150px;
   .thumbnail {
     margin: 10px;
-    width: $widthM;
+    width: $img-sizeM;
     overflow: hidden;
     text-align: center;
-    @media #{$S}{
+    @include S{
       width: 120px;
       margin: 5px;
     }
     p.caption{
-      width: $widthM;
+      width: $img-sizeM;
     }
   }
   .thumbnail.x2{
     width: 130px;
     p.caption{
-      width: $widthS;
+      width: $img-sizeS;
     }
   }
   .thumbnail.x3 {
     p.caption{
-      width: $widthL;
+      width: $img-sizeL;
     }
   }
   .thumbnail img {
@@ -60,31 +61,44 @@ $widthL: 620px;
   a{
     text-decoration: none;
   }
+  img{
+    transition: .2s;
+  }
   p.caption{
-    height: 100px;
+    padding: 10px 0;
+    line-height: 1.8rem;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    // border-left: 1px solid $base-color;
-    // border-right: 1px solid $base-color;
-    // border-bottom: 1px solid $base-color;
-    // border-radius: 0 0 5px 5px;
-    @media #{$S}{
-      font-size: 1.2rem;
-      height: 70px;
+    position: absolute;
+    background: #fff;
+    color: $font-color;
+    transition: .3s;
+    bottom: -100%;
+    @include S {
+      display: none;
     }
   }
+}
+
+.thumbnail{
+  opacity: 0;
+  position: relative;
 }
 #works{
-  .m-gallery {
-    .thumbnail {
-      border: 1px solid $base-color;
-    }
+  .thumbnail {
+    border: 1px solid $base-color;
   }
 }
-.j-gallery img:hover,
-.m-gallery .thumbnail:hover{
-  opacity: .7;
+
+#family,
+#gallery{
+  .thumbnail {
+    transition: .2s;
+    &:hover {
+      filter: alpha(0.6);
+    }
+  }
 }
 
 
@@ -95,8 +109,8 @@ $widthL: 620px;
   profile
 //////////////////////////////////////////////////////*/
 
-div.section-inner{
-  h2.section-ttl{
+.section-inner{
+  .section-ttl{
   }
   p{
     text-align: center;
@@ -104,21 +118,18 @@ div.section-inner{
   p{
     font-size: 1rem;
     line-height: 2rem;
-    @media #{$M}{
+    @include M {
       font-size: 1.4rem;
       line-height: 3rem;
     }
-    @media #{$L}{
+    @include L {
       font-size: 1.8rem;
       line-height: 4rem;
     }
   }
 }
-main{
-  margin-top: 100px;
-}
+
 section{
-  padding: 100px 0;
   .profile-img{
     display: block;
     width: 250px;
@@ -130,37 +141,40 @@ section{
     padding-top: 50px;
     margin: 0 auto;
     width: 100%;
-    @media #{$M}{
+    @include M {
       width: 455px;
     }
     td{
-      @media #{$S}{
+      @include S {
         font-size: 1.2rem;
       }
-      @media #{$M}{
+      @include M {
         font-size: 1.5rem;
       }
     }
   }
+  &:not(:first-child){
+    margin-top: 200px;
+  }
 }/*-- /div.#profile --*/
 
-/* /////////////////////////////////////////////////////
+/*/////////////////////////////////////////////////////
   contact
 //////////////////////////////////////////////////////*/
 
 form{
   width: 285px;
   margin: 0 auto;
-  @media #{$M}{
+  @include M {
     width: 450px;
   }
   p{
     margin-top: 15px;
     width: 100%;
-    @media #{$S}{
+    @include S {
       font-size: 1.2rem;
     }
-    @media #{$M}{
+    @include M {
       margin-top: 20px;
       width: 450px;
     }
@@ -174,7 +188,7 @@ form{
     label{
       font-weight: bold;
       width: 85px;
-      @media #{$M}{
+      @include M {
         width: 150px;
       }
     }
@@ -188,7 +202,7 @@ form{
       border: none;
     }
     input[type="text"] {
-      @media #{$S}{
+      @include S {
         width: 185px;
       }
     }
@@ -209,7 +223,7 @@ form{
       margin-top: 10px;
       border: solid 1px rgb(128, 208, 157);
       width: 267px;
-      @media #{$M}{
+      @include M {
         width: 432px;
       }
     }
@@ -230,11 +244,8 @@ form{
     border-bottom: solid 1px #80d09d;
     height: 0;
     width: 285px;
-    @media #{$M}{
+    @include M {
       width: 432px;
     }
   }
 }/*-- /form --*/
-
-
-@import "font-awesome";

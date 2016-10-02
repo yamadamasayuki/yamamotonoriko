@@ -1,0 +1,27 @@
+/* /////////////////////////////////////////////////////
+  メディアクエリ　break point
+//////////////////////////////////////////////////////*/
+
+@mixin S {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin M {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin L {
+  @media screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin other-PC {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
+var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var please = require('gulp-pleeease');
 var uglify = require('gulp-uglify');
-var webserver = require('gulp-webserver');
+// var webserver = require('gulp-webserver');
 
 gulp.task('html', function(){
   gulp.src('./src/*.html')
@@ -26,30 +27,38 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-  gulp.src('./src/js/*.js')
+  gulp.src('./src/js/common.js')
     .pipe(plumber())
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'))
 });
 
-gulp.task('watch', function(){
+// gulp.task('webserver', function(){
+//   gulp.src('./dist')
+//     .pipe(
+//       webserver({
+//         host: '192.168.0.5',
+//         port: '8003',
+//         livereload: true
+//       })
+//   );
+// });
+
+
+
+
+gulp.task('default', ['html', 'sass', 'js']);
+
+gulp.task('w', function(){
   gulp.watch('./src/*.html', ['html'])
   gulp.watch('./src/sass/**/*.scss', ['sass'])
   gulp.watch('./src/js/*.js', ['js'])
 });
 
-gulp.task('webserver', function(){
-  gulp.src('./dist')
-    .pipe(
-      webserver({
-        host: 'localhost',
-        port: '8002',
-        livereload: true
-      })
-  );
+gulp.task('p', function(){
+  gulp.src('./src/js/plugin/*.js')
+    .pipe(concat('plugin.js'))
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'));
 });
-
-
-
-
-gulp.task('default', ['html', 'sass', 'js', 'watch', 'webserver']);
