@@ -283,6 +283,15 @@ var initPhotoSwipeFromDOM = function( gallerySelector ) {
         options = {
             index: index,
 
+						//ここからオプション追加
+						preload: [1,3],
+						hideAnimationDuration: 1200,
+						showHideOpacity: true,
+						pinchToClose: true,
+						closeOnVerticalDrag: true,
+						closeOnScroll: false,
+						//ここまで追加
+
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
 
@@ -365,7 +374,21 @@ $('#works').each(function(){
 		}
 	);
 });
-
+//////////////////////////////////////////////////////////////
+// おむすび
+//////////////////////////////////////////////////////////////
+// 	var count = 0;
+// 	var countup = function(){
+// 	console.log(count++);
+// 	var left = 35 + (count * 50 ) + 'px';
+// 	console.log(left);
+// 	$('.omusubi').css({left:left});
+// 	}
+// 　var id = setInterval(function(){
+// 　　countup();
+// 　　if(count > 25){　
+// 　　　clearInterval(id);　//idをclearIntervalで指定している
+// 　　}}, 2000);
 
 
 });//Finished all
