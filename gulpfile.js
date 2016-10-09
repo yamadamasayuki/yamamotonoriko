@@ -7,11 +7,6 @@ var please = require('gulp-pleeease');
 var uglify = require('gulp-uglify');
 // var webserver = require('gulp-webserver');
 
-gulp.task('html', function(){
-  gulp.src('./src/*.html')
-    .pipe(gulp.dest('./dist'));
-});
-
 gulp.task('sass', function(){
   gulp.src('./src/sass/*.scss')
     .pipe(plumber())
@@ -47,10 +42,9 @@ gulp.task('js', function(){
 
 
 
-gulp.task('default', ['html', 'sass', 'js']);
+gulp.task('default', ['sass', 'js']);
 
 gulp.task('w', function(){
-  gulp.watch('./src/*.html', ['html'])
   gulp.watch('./src/sass/**/*.scss', ['sass'])
   gulp.watch('./src/js/*.js', ['js'])
 });

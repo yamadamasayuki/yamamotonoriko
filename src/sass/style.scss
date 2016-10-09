@@ -64,7 +64,8 @@ $img-sizeL: 620px;
   img{
     transition: .2s;
   }
-  p.caption{
+  .caption{
+		width: 100%;
     padding: 10px 0;
     line-height: 1.8rem;
     display: table-cell;

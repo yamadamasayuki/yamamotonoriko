@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" >
+    <title>Photographer 山本倫子</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  </head>
+  <body id="contact">
+    <header>
+      <div class="humberger-icon type-6">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="../" class="txt-en">HOME</a></li>
+          <li><a href="../family" class="txt-en">FAMILY</a></li>
+          <li><a href="../works" class="txt-en">WORKS</a></li>
+          <li><a href="../gallery" class="txt-en">GALLERY</a></li>
+          <li><a href="../profile" class="txt-en">PROFILE</a></li>
+          <li class="active-li txt-en">CONTACT</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="contents" class="container">
+        <section class="section contact">
+          <h2 class="section-ttl none">Contact</h2>
+          <form class="none">
+            <p class="underLine"><label for="userName">お名前</label><input type="text" name="userName" size="39" id="userName"></p>
+            <p class="underLine"><label for="tel">電話番号</label><input type="text" name="tel" size="39" id="tel"></p>
+            <p class="underLine"><label for="email">メールアドレス</label><input type="text" name="email" size="39" id="email"></p>
+            <p class="underLine"><label for="subject">要件</label><input type="radio" name="subject" value="お仕事の依頼" checked="checked">お仕事の依頼<input type="radio" name="subject" value="その他">その他</p>
+            <p><label for="comment">お問合せ内容</label><br><textarea cols="52" rows="6" id="comment"></textarea></p>
+            <p><input type="submit" value="送信する" id="sub"></p>
+          </form>
+        </section>
+      </div><!-- /.contents -->
+    </main>
+    <footer id="footer">
+      <p class="ft-copy txt-en"><small>&copy; 2016 Noriko Yamamoto All right reserved.</small></p>
+    </footer>
+    <script src="../js/common.js"></script>
+    <script src="../js/plugin.js"></script>
+  </body>
+</html>
