@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////*/
 #top{
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 
   nav{
     @include L {
@@ -407,6 +407,177 @@ div.humberger-icon {
   }
 }
 
+.omusubi{
+  display: none;
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 4px;
+  left: -50px;
+  animation: omusubi 30s linear 0.5s infinite;
+  transform-origin: center;
+    @include other-PC {
+      display: none;
+    }
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+@keyframes omusubi {
+  0%{
+    transform: rotateZ(0);
+    left: -50px;
+    top: 4px;
+  }
+  6%{
+    transform: rotateZ(60deg);
+    left: -25px;
+    top: 0;
+  }
+  10%{
+    transform: rotateZ(120deg);
+    left: 0px;
+    top: 10px;
+  }
+  12%{
+    transform: rotateZ(120deg);
+    left: 0px;
+    top: 10px;
+  }
+  16%{
+    transform: rotateZ(160deg);
+    left: 25px;
+    top: 0px;
+  }
+  20%{
+    transform: rotateZ(240deg);
+    left: 50px;
+    top: 10px;
+  }
+  22%{
+    transform: rotateZ(240deg);
+    left: 50px;
+    top: 10px;
+  }
+  26%{
+    transform: rotateZ(300deg);
+    left: 75px;
+    top: -5px;
+  }
+  30%{
+    transform: rotateZ(360deg);
+    left: 100px;
+    top: 4px;
+  }
+  32%{
+    transform: rotateZ(360deg);
+    left: 100px;
+    top: 4px;
+  }
+  36%{
+    transform: rotateZ(420deg);
+    left: 125px;
+    top: -5px;
+  }
+  40%{
+    transform: rotateZ(480deg);
+    left: 150px;
+    top: 10px;
+  }
+  42%{
+    transform: rotateZ(480deg);
+    left: 150px;
+    top: 10px;
+  }
+  46%{
+    transform: rotateZ(540deg);
+    left: 175px;
+    top: -11px;
+  }
+  50%{
+    transform: rotateZ(600deg);
+    left: 200px;
+    top: 10px;
+  }
+  52%{
+    transform: rotateZ(600deg);
+    left: 200px;
+    top: 10px;
+  }
+  56%{
+    transform: rotateZ(660deg);
+    left: 225px;
+    top: -11px;
+  }
+  60%{
+    transform: rotateZ(720deg);
+    left: 250px;
+    top: 4px;
+  }
+  62%{
+    transform: rotateZ(720deg);
+    left: 250px;
+    top: 4px;
+  }
+  66%{
+    transform: rotateZ(780deg);
+    left: 275px;
+    top: -5px;
+  }
+  70%{
+    transform: rotateZ(840deg);
+    left: 300px;
+    top: 10px;
+  }
+  72%{
+    transform: rotateZ(840deg);
+    left: 300px;
+    top: 10px;
+  }
+  76%{
+    transform: rotateZ(900deg);
+    left: 325px;
+    top: -11px;
+  }
+  80%{
+    transform: rotateZ(960deg);
+    left: 350px;
+    top: 10px;
+  }
+  82%{
+    transform: rotateZ(960deg);
+    left: 350px;
+    top: 10px;
+  }
+  86%{
+    transform: rotateZ(1020deg);
+    left: 375px;
+    top: -11px;
+  }
+  90%{
+    transform: rotateZ(1080deg);
+    left: 400px;
+    top: 4px;
+  }
+  92%{
+    transform: rotateZ(1080deg);
+    left: 400px;
+    top: 4px;
+  }
+  96%{
+    transform: rotateZ(1140deg);
+    left: 425px;
+    top: -5px;
+  }
+  100%{
+    transform: rotateZ(1200deg);
+    left: 450px;
+    top: 10px;
+  }
+}
 
 /* /////////////////////////////////////////////////////
   footer

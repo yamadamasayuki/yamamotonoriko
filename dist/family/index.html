@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/justifiedGallery.min.css" rel="stylesheet">
-    <link href="../css/photoswipe.css" rel="stylesheet">
-    <link href="../css/default-skin/default-skin.css" rel="stylesheet">
+    <link href="../css/lg-transitions.min.css" rel="stylesheet">
+    <link href="../css/lightgallery.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -70,20 +70,9 @@
     </footer>
     <script src="../js/common.js"></script>
     <script src="../js/plugin.js"></script>
-    <script src="../js/jquery.photoswipe.min.js"></script>
+    <script src="../js/lightgallery.min.js"></script>
+    <script src="../js/lightgallery-all.min.js"></script>
     <script>
-    $(document).ready(function(){
-      $(".j-gallery").justifiedGallery({
-        rowHeight       : 300, // 1行の高さ設定
-    		fixedHeight     : true, // rowHeightに沿った高さにするか
-    		margins         : 20, // 画像の隙間設定
-    		lastRow         : 'nojustify', // 最後の行をどうするか
-    		//randomize       : true, // ランダム
-    		sort            : false, // ソートをするかどうか
-    		rel             : 'gallery1', // rel属性の書き換え
-    		//captions        : true, // captionを付けるかどうか
-    		//captionSettings : { animationDuration: 500, visibleOpacity: 0.8, nonVisibleOpacity: 0.0 } // caption設定
-      });
       $('.m-gallery').imagesLoaded(function(){
         $('.m-gallery').masonry({
           itemSelector: '.thumbnail',
@@ -91,7 +80,13 @@
           isFitWidth: true  //親要素の幅に合わせてカラム数を自動調整
         });
       });
-    });
+      $('.m-gallery').lightGallery({
+          selector: '.thumbnail a',
+          mode: 'lg-fade',
+          thumbnail: false,
+          download: false,
+          speed: 600
+      });
     </script>
   </body>
 </html>
