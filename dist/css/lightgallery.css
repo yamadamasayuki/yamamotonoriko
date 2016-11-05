@@ -22,7 +22,7 @@
 }
 
 .lg-actions .lg-next, .lg-actions .lg-prev {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: transparent;;
   border-radius: 2px;
   color: #999;
   cursor: pointer;
@@ -52,7 +52,7 @@
   opacity: 0.5;
 }
 .lg-actions .lg-next:hover, .lg-actions .lg-prev:hover {
-  background: rgba(153, 153, 153, 0.45);
+  background: transparent;
 
 }
 .lg-actions .lg-next {
@@ -62,7 +62,7 @@
   content: "";
   width: 30px;
   height: 100px;
-  background-image: url(../img/arrow-w.png);
+  background-image: url(../img/arrow.png);
   background-repeat: no-repeat;
   background-position: right center;
   position: absolute;
@@ -89,7 +89,7 @@
   content: "";
   width: 30px;
   height: 100px;
-  background-image: url(../img/arrow-w.png);
+  background-image: url(../img/arrow.png);
   background-repeat: no-repeat;
   background-position: left center;
   content: "";
@@ -215,7 +215,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: transparent;
 }
 .lg-toolbar .lg-icon {
   color: #999;
@@ -234,7 +234,7 @@
   transition: color 0.2s linear;
 }
 .lg-toolbar .lg-icon:hover {
-  color: #FFF;
+  color: #80d09d;
 }
 .lg-toolbar .lg-close:after {
   content: "\e070";
@@ -244,9 +244,9 @@
 }
 
 .lg-sub-html {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(255, 255, 255, 0.6);
   bottom: 0;
-  color: #EEE;
+  color: #999;
   font-size: 16px;
   left: 0;
   padding: 10px 40px;
@@ -496,7 +496,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-progress-bar {
-  background-color: #333;
   height: 5px;
   left: 0;
   position: absolute;
@@ -945,7 +944,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   right: 0;
   bottom: 0;
   z-index: 1040;
-  background-color: #000;
+  background-color: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.15s ease 0s;
   -o-transition: opacity 0.15s ease 0s;

@@ -2,17 +2,18 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" >
-    <title>CONTACT｜Photographer 山本倫子</title>
+    <title>CONTACT｜Photographer 山本倫子</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/validationEngine.jquery.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
   <body id="contact">
     <header>
@@ -36,14 +37,18 @@
       <div id="contents" class="container">
         <section class="section contact">
           <h2 class="section-ttl none">Contact</h2>
-          <form class="none">
-            <p class="underLine"><label for="userName">お名前</label><input type="text" name="userName" size="39" id="userName"></p>
-            <p class="underLine"><label for="tel">電話番号</label><input type="text" name="tel" size="39" id="tel"></p>
-            <p class="underLine"><label for="email">メールアドレス</label><input type="text" name="email" size="39" id="email"></p>
-            <p class="underLine"><label for="subject">要件</label><input type="radio" name="subject" value="お仕事の依頼" checked="checked">お仕事の依頼<input type="radio" name="subject" value="その他">その他</p>
-            <p><label for="comment">お問合せ内容</label><br><textarea cols="52" rows="6" id="comment"></textarea></p>
-            <p><input type="submit" value="送信する" id="sub"></p>
+
+          <form id="form" class="none" action="form.php" method="post">
+            <p class="underLine"><label for="name" class="required">お名前</label><input id="name" class="validate[required]" type="text" name="name" size="39"></p>
+            <p class="underLine"><label for="tel">電話番号</label><input id="tel" class="validate[optional,custom[phone]]" type="text" name="tel" size="39"></p>
+            <p class="underLine"><label for="email" class="required">E-mail</label><input id="email" class="validate[required,custom[email]]" type="text" name="email" size="39"></p>
+            <!-- <p class="underLine"><label for="subject">要件</label><input type="radio" name="subject" value="お仕事の依頼" checked="checked">お仕事の依頼<input type="radio" name="subject" value="その他">その他</p> -->
+            <p><label for="comment" class="required">お問合せ内容</label><br><textarea id="comment" class="validate[required]" name="comment" cols="52" rows="6"></textarea></p>
+            <p class="note"><small><span class="atten">※</span>は必須項目です。</small></p>
+            <p class="sub"><input class="sub-button" type="submit" value="確認する" id="sub"></p>
+            <input type="hidden" name="mode" value="post">
           </form>
+
         </section>
       </div><!-- /.contents -->
     </main>
@@ -52,5 +57,8 @@
     </footer>
     <script src="../js/common.js"></script>
     <script src="../js/plugin.js"></script>
+    <script type="text/javascript">
+      $("#form").validationEngine();
+    </script>
   </body>
 </html>

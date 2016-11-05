@@ -5,15 +5,11 @@
   Top
 //////////////////////////////////////////////////////*/
 #top{
-  width: 100vw;
+  width: 100%;
   height: 95vh;
-
   nav{
-    @include L {
-      bottom: 10vh;
-    }
+    top: -15vh;
   }
-
 }/*-- /#top --*/
 
 .outline01{
@@ -172,7 +168,7 @@
 
 nav{
   width: 700px;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   margin: auto;
@@ -583,7 +579,7 @@ div.humberger-icon {
   footer
 //////////////////////////////////////////////////////*/
 footer{
-  background: lighten($base-color, 5%);
+  background: $base-color;
   text-align: center;
   padding: 10px 0;
   p{

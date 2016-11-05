@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" >
-    <title>WORKS｜Photographer 山本倫子</title>
+    <title>WORKS｜Photographer 山本倫子</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
@@ -10,11 +10,11 @@
     <link href="../css/lg-transitions.min.css" rel="stylesheet">
     <link href="../css/lightgallery.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   </head>
   <body id="works">
     <header>
@@ -223,21 +223,5 @@
     <script src="../js/common.js"></script>
     <script src="../js/plugin.js"></script>
     <script src="../js/lightgallery-all.min.js"></script>
-    <script>
-      $('.m-gallery').imagesLoaded(function(){
-        $('.m-gallery').masonry({
-          itemSelector: '.thumbnail',
-          //columnWidth: 200,
-          isFitWidth: true  //親要素の幅に合わせてカラム数を自動調整
-        });
-      });
-      $('.m-gallery').lightGallery({
-          selector: '.thumbnail a',
-          mode: 'lg-fade',
-          thumbnail: false,
-          download: false,
-          speed: 600
-      });
-    </script>
   </body>
 </html>

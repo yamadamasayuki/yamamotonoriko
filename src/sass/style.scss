@@ -76,6 +76,7 @@ $img-sizeL: 620px;
     color: $font-color;
     transition: .3s;
     bottom: -100%;
+    border-top: solid 1px $base-color;
     @include S {
       display: none;
     }
@@ -95,9 +96,11 @@ $img-sizeL: 620px;
 #family,
 #gallery{
   .thumbnail {
-    transition: .2s;
-    &:hover {
-      filter: alpha(0.6);
+    img{
+      transition: 0.5s;
+      &:hover {
+        filter: alpha(0.6);
+      }
     }
   }
 }
@@ -162,8 +165,16 @@ section{
 /*/////////////////////////////////////////////////////
   contact
 //////////////////////////////////////////////////////*/
+.note{
+  margin-top: 0;
+}
+.atten{
+  color: rgba(241, 90, 90, 1);
+  margin-right: 5px;
+}
 
-form{
+form,
+.form{
   width: 285px;
   margin: 0 auto;
   @include M {
@@ -182,57 +193,11 @@ form{
     &:nth-child(4){
       display: inline-block;
     }
-    &:last-child{
-      text-align: center;
-      margin-top: 20px;
-    }
-    label{
-      font-weight: bold;
-      width: 85px;
-      @include M {
-        width: 150px;
-      }
-    }
-    input[type="button"],input[type="text"],input[type="submit"],textarea {
-       -webkit-appearance: none;
-       border-radius: 5px;
-    }
-    input[type="text"], textarea {
-      line-height: 3rem;
-      padding: 0 8px;
-      border: none;
-    }
-    input[type="text"] {
-      @include S {
-        width: 185px;
-      }
-    }
-    input[type="submit"]{
-      border: none;
-      background: $base-color;
-      color: #fff;
-      width: 150px;
-      line-height: 4.5rem;
-      font-size: 1.7rem;
-      letter-spacing: 0.2rem;
-      &:hover{
-        background: lighten($base-color, 10%);
-        cursor: pointer;
-      }
-    }
-    textarea{
-      margin-top: 10px;
-      border: solid 1px rgb(128, 208, 157);
-      width: 267px;
-      @include M {
-        width: 432px;
-      }
-    }
-    input[type="radio"]{
-      margin-left: 30px;
-      margin-right: 10px;
-    }
   }/*-- /p --*/
+  .sub{
+    text-align: center;
+    margin-top: 20px;
+  }
   .underLine{
     display: flex;
   }
@@ -249,4 +214,113 @@ form{
       width: 432px;
     }
   }
+
+  label{
+    font-weight: bold;
+    width: 85px;
+    @include M {
+      width: 150px;
+    }
+  }
+  .required::after{
+    content: "※";
+    color: rgba(241, 90, 90, 1);
+    font-size: 1.2rem;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  input[type="button"],input[type="text"],input[type="submit"],textarea {
+     -webkit-appearance: none;
+     border-radius: 5px;
+  }
+  input[type="text"], textarea {
+    line-height: 3rem;
+    padding: 0 8px;
+    border: none;
+  }
+  input[type="text"] {
+    @include S {
+      width: 185px;
+    }
+  }
+  .sub-button{
+    border: none;
+    background: $base-color;
+    color: #fff;
+    width: 150px;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    &:hover{
+      background: lighten($base-color, 10%);
+      cursor: pointer;
+    }
+  }
+  .back-button{
+    border: solid $font-color 1px;
+    background: #fff;
+    color: $font-color;
+    width: 150px;
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  textarea{
+    margin-top: 10px;
+    border: solid 1px rgb(128, 208, 157);
+    width: 267px;
+    @include M {
+      width: 432px;
+    }
+  }
+  input[type="radio"]{
+    margin-left: 30px;
+    margin-right: 10px;
+  }
 }/*-- /form --*/
+
+#conf,
+#send{
+  .container{
+    margin: 100px 5% 50px;
+    @include L {
+      width: 768px;
+      margin: 100px auto;
+    }
+  }
+  .form{
+    margin: 80px auto 70px;
+  }
+  footer{
+    @include M {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    }
+  }
+}
+.conf-form{
+  overflow: hidden;
+  p{
+    text-align: center;
+    @include M {
+      width: 150px;
+      float: right;
+    }
+  }
+  .conf-button1{
+    margin: 0;
+    @include M {
+      margin: 0 45px 0 25px;
+    }
+  }
+  .conf-button2{
+    margin: 30px 0 0;
+    @include M {
+      margin: 0 25px 0 45px;
+    }
+  }
+}
